@@ -1,0 +1,47 @@
+{% extends 'master.html' %}
+{% block body %}
+<div class="container">
+    <div class="features_items"><!--features_items-->
+        <h2 class="title text-center">Search Results</h2>
+
+        {% if product %}
+            {% for prod in product %}
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="/{{ prod.image }}" alt="" height="200px;"/>
+                                <h2>₹{{ prod.price }}</h2>
+                                <p>{{ prod.name }}</p>
+                                <p>{{ prod.disc }}</p>
+                                <a href="{% url 'cart_add' prod.id %}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                            </div>
+                            <div class="product-overlay">
+                                <div class="overlay-content">
+                                    <h2>₹{{ prod.price }}</h2>
+                                    <p>{{ prod.name }}</p>
+                                    <p>{{ prod.disc }}</p>
+                                    <a href="{% url 'cart_add' prod.id %}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choose">
+                            <ul class="nav nav-pills nav-justified">
+                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="text-center">No products found for your search.</p>
+                            <div class="text-center" style="margin-top: 20px;">
+                <a href="{% url 'index' %}" class="btn btn-primary">Return to Home</a>
+            </div>
+
+        {% endif %}
+
+    </div><!--features_items-->
+</div>
+{% endblock %}

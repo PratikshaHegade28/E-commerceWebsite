@@ -1,0 +1,277 @@
+{% extends 'master.html' %}
+
+{% block head %}
+<style>
+    #slider-carousel .slider-image {
+        width: 100%;
+        height: 10px; /* Set the desired height */
+        object-fit: cover; /* Ensure the image fills the space without distortion */
+    }
+
+    #slider-carousel .col-sm-6 h1 {
+        font-size: 2.5rem;
+        color: #333;
+    }
+
+    #slider-carousel .col-sm-6 h2 {
+        font-size: 1.5rem;
+        color: #666;
+    }
+
+    #slider-carousel .col-sm-6 p {
+        font-size: 1rem;
+        color: #777;
+    }
+
+    #slider-carousel .btn-default.get {
+        background-color: #FE980F;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 20px;
+    }
+
+    #slider-carousel .btn-default.get:hover {
+        background-color: #e67e22;
+        color: #fff;
+    }
+
+
+
+	<style>
+    .feature-box {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+        text-align: center;
+    }
+
+    .feature-box:hover {
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-box img {
+        max-width: 80px;
+        margin-bottom: 20px;
+    }
+
+    .feature-box h4 {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+    }
+
+    .feature-box p {
+        font-size: 1rem;
+        color: #6c757d;
+        margin-bottom: 20px;
+    }
+
+    .btn-warning {
+        background-color: #ffd700;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-warning:hover {
+        background-color: #e6b800;
+    }
+
+
+
+</style>
+
+{%endblock%}
+{% block body %}
+<section id="slider" >
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="slider-carousel" class="carousel slide" data-ride="carousel" >
+                    <div class="carousel-inner">
+                        <!-- First Slide -->
+                        <div class="item active">
+                            <div class="col-sm-6">
+                                <img src="/static/images/home/eshoplogo.png" alt="" style="height: 100px; width: auto;" />
+                                <h2>Organic Products</h2>
+                                <p>Our grocery e-commerce platform offers a seamless shopping experience, bringing fresh, quality products directly to your doorstep.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="/static/images/home/c1.png" class="slider-image" alt="First Slide">
+                            </div>
+                        </div>
+                        <!-- Second Slide -->
+                        <div class="item">
+                            <div class="col-sm-6">
+                                <img src="/static/images/home/eshoplogo.png" alt="" style="height: 100px; width: auto;" />
+                                <h2>100% Natural Process </h2>
+                                <p>With an easy-to-use interface, customers can browse a wide variety of organic and locally-sourced groceries, ensuring healthy choices for every household.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="/static/images/home/c2.png" class="slider-image" alt="Second Slide">
+                            </div>
+                        </div>
+                        <!-- Third Slide -->
+                        <div class="item">
+                            <div class="col-sm-6">
+                                <img src="/static/images/home/eshoplogo.png" alt="" style="height: 100px; width: auto;" />
+                                <h2>Fast Delivery</h2>
+                                <p>Our focus on sustainability, fast delivery, and customer satisfaction makes grocery shopping more convenient and eco-friendly than ever before.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="/static/images/home/c1.png" class="slider-image" alt="Third Slide">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Feature Start -->
+<div class="container-fluid bg-light" style="background-color: #9acd32; padding: 60px 20px; margin-bottom: 50px; border-radius: 10px; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);">
+    <div class="container">
+        <div class="section-header text-center mx-auto mb-5">
+            <h1 class="display-5 mb-3" style="color: #090909; font-weight: bold; text-shadow: 2px 2px 5px rgba(0,0,0,0.2); margin-top: 0px;">Our Features</h1>
+            <p style="font-size: 18px; color: #444; margin-top: 10px;margin-bottom: 20px;">We provide fresh and quality groceries with the convenience of online shopping and timely delivery at your doorstep</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-white text-center h-100 p-4 p-xl-5 feature-box"
+                     style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; transition: transform 0.3s, box-shadow 0.3s;">
+                    <img class="img-fluid mb-4" src="/static/images/home/icon-1.png" alt="Natural Process"
+                         style="width: 80px; height: auto;">
+                    <h4 class="mb-3" style="color: #555; font-weight: bold;">Natural Process</h4>
+                    <p class="mb-4" style="color: #777; font-size: 16px;">We ensure that all our fresh produce is grown and sourced using sustainable and eco-friendly farming methods, free from harmful chemicals.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-white text-center h-100 p-4 p-xl-5 feature-box"
+                     style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; transition: transform 0.3s, box-shadow 0.3s;">
+                    <img class="img-fluid mb-4" src="/static/images/home/icon-2.png" alt="Organic Products"
+                         style="width: 80px; height: auto;">
+                    <h4 class="mb-3" style="color: #555; font-weight: bold;">Organic Products</h4>
+                    <p class="mb-4" style="color: #777; font-size: 16px;">Our organic products are carefully selected to provide you with the best nature has to offer. Grown without synthetic pesticides or chemicals, that healthier choice for you and your family.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Feature End -->
+
+
+
+
+
+
+
+
+<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="left-sidebar">
+						<h2 style="color: #9acd32;">Category</h2>
+						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+
+							{% for cat in category %}
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#{{cat.id}}">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											{{cat.name}}
+										</a>
+									</h4>
+								</div>
+								<div id="{{cat.id}}" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											{% for i in cat.sub_category_set.all %}
+											<li><a href="/?category={{i.id}}">{{i.name}} </a></li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+
+						</div><!--/category-products-->
+
+						<div class="brands_products"><!--brands_products-->
+							<h2 style="color: #9acd32;">Brands</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									{% for i in brand %}
+									<li><a href="/?brand={{i.id}}"> <span class="pull-right">(50)</span>{{i.name}}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div><!--/brands_products-->
+
+
+						<div class="shipping text-center"><!--shipping-->
+							<img src="images/home/shipping.jpg" alt="" />
+						</div><!--/shipping-->
+
+					</div>
+				</div>
+
+				<div class="col-sm-9 padding-right">
+					<div class="features_items"><!--features_items-->
+						<h2 class="title text-center">
+							 <span style="color: #9acd32;">OUR PRODUCT</span>
+						</h2>
+
+						{% for prod in product %}
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+										<div class="productinfo text-center">
+											<img src="{{prod.image}}" alt="" height="200px;"/>
+											<h2>₹{{prod.price}}</h2>
+											<p>{{prod.name}}</p>
+											<p>{{prod.disc}}</p>
+											<a href="{% url 'cart_add' prod.id %}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+										<div class="product-overlay" style="background-color: #9acd32;">
+											<div class="overlay-content">
+												<h2>₹{{prod.price}}</h2>
+												<p>{{prod.name}}</p>
+												<p>{{prod.disc}}</p>
+												<a href="{% url 'cart_add' prod.id %}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+										</div>
+								</div>
+								
+							</div>
+						</div>
+						</div>
+						{% endfor %}
+
+					</div><!--features_items-->
+
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}
